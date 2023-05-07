@@ -1,0 +1,31 @@
+{
+  "name": "order",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc-first-build": "tsc",
+    "tsc-clean": "tsc --build --clean",
+    "watch-tsc": "tsc -w",
+    "watch-deploy": "nodemon dist/index.js",
+    "server": "concurrently \"npm run watch-tsc\" \"npm run watch-deploy\"",
+    "deploy": "node dist/index.js",
+    "start": "npm run deploy",
+    "start:dev": "nodemon src/index.ts"
+  },
+  "keywords": [],
+  "author": "Olexander Pedenko",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/node": "^16.18.25",
+    "concurrently": "^6.5.1",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
