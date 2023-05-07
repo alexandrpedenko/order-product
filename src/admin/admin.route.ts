@@ -1,13 +1,13 @@
 import { Router, Request, Response, NextFunction } from "express";
-import { createVendor } from "./admin.controller";
+import { createVendor, getVendors, getSingleVendor } from "./admin.controller";
 
 const adminRouter = Router();
 
-adminRouter.get('/', (req: Request, res: Response, next: NextFunction) => {
-  res.json('Hello from Admin')
-});
+adminRouter.post('/vendors', createVendor);
 
-adminRouter.post('/vendor', createVendor);
+adminRouter.get('/vendors', getVendors);
+
+adminRouter.get('/vendors/:id', getSingleVendor);
 
 
 export default adminRouter;

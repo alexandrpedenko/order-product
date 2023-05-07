@@ -7,4 +7,10 @@ declare global {
       reviver?: (key: any, value: any) => any
     ): any;
   }
+
+  namespace NodeJS {
+    interface ProcessEnv {
+      DB_URI: string;
+    }
+  }
 }
