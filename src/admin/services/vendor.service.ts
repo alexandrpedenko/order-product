@@ -33,7 +33,7 @@ export class VendorService {
     return vendor;
   }
 
-  async isVendorExist(email: string): Promise<boolean>  {
+  private async isVendorExist(email: string): Promise<boolean>  {
     const vendor = await this.vendorRepository.findOne({ email });
     return vendor !== null;
   }

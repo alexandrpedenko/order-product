@@ -18,5 +18,5 @@ export class VendorResponseDto {
   phone: string;
 
   @Expose()
-  foodCategory: [string];
+  productsCategories: [string];
 }

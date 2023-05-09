@@ -6,11 +6,11 @@ interface VendorDoc extends Document {
   name: string;
   address: string;
   phone: string;
-  foodCategory: [string];
   rating: number;
   foods: [string];
   isAvailable: boolean;
   images: [string]
+  productsCategories: [string];
 };
 
 const VendorSchema = new Schema(
@@ -24,7 +24,7 @@ const VendorSchema = new Schema(
     rating: { type: Number },
     images: { type: [String]},
     isAvailable: { type: Boolean },
-    // foodCategory: [{
+    // productsCategories: [{
     //   type: SchemaTypes.ObjectId,
     //   ref: 'food'
     // }],
